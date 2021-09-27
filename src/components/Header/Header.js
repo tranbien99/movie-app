@@ -18,7 +18,7 @@ const Header = () => {
 	return (
 		<div className="header">
 			<div className='logo'>
-				<Link to='/'>
+				<Link to='/home'>
 					MovieApp
 				</Link>
 			</div>
