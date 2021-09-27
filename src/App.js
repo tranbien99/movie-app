@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom' 
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom' 
 import './App.scss'
 
 import Home from './components/Home/Home';
@@ -16,7 +16,8 @@ function App() {
         <Header />
         <div className='container'>
           <Switch>
-            <Route path='/' exact component={Home} />
+            <Redirect exact from="/" to="/home" />
+            <Route exact path='/home' exact component={Home} />
             <Route path='/movie/:imbID' component={MovieDetail} />
             <Route component={PageNotFound} />
           </Switch>
